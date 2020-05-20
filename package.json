@@ -3,13 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "npm-run-all --parallel serve-json serve-vue",
+    "serve-json": "json-server ./json-server/data.json -w --routes ./json-server/routes.json",
+    "serve-vue": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e",
+    "test:unit": "vue-cli-service test:unit --watchAll",
+    "test:e2e": "npm-run-all --parallel test:e2e:serve-json test:e2e:vue",
+    "test:e2e:serve-json": "json-server ./tests/e2e/fixtures/data.json -w --routes ./json-server/routes.json --middlewares ./tests/e2e/support/json-server-reset.js",
+    "test:e2e:vue": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6"
@@ -27,6 +32,8 @@
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^6.2.2",
+    "json-server": "^0.16.1",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.19.1",
     "vue-template-compiler": "^2.6.11"
   }
