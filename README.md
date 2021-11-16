@@ -2,6 +2,10 @@
 
 Welcome! We are very excited that you have chosen to pursue a developer position with Tech Elevator!
 
+Our goal in this exercise is to see your thought processes and see how you approach adding features. We are not expecting you to complete everything in this exercise and want you to limit your amount of work to only **two (2) hours total**. Once two hours are up, stop where you are and submit the code to us as described below.
+
+It's important that you also include the `SUMMARY.md` as described in the *Evaluation Criteria*. This write up does not need to be part of the two hours reserved for the exercise and can be completed after.
+
 ## Your Mission
 
 Currently, we have a single page available that displays a list of exercises. However, we've realized that we need to enhance this functionality.
@@ -10,6 +14,7 @@ On the exercises page, we'd like you to add the average scores for each exercise
 
 Based on the data returned from the API, we expect the following to be the average scores for exercises:
 
+```
     Intro to OOP: 2.60
     Intro to SQL: 1.70
     Polymorphism : 2.00
@@ -19,6 +24,7 @@ Based on the data returned from the API, we expect the following to be the avera
     REST APIs: 2.06
     CSS Selectors: 2.20
     Average Overall Score: 2.19
+```
 
 This might look something like the following:
 
@@ -71,9 +77,12 @@ We will be looking for the following:
 - Code is documented where necessary.
 - Commit history includes clear commit messages.
 - All of the requested features are implemented.
-- A markdown document that discusses your thoughts and approach to your solution.
+- A markdown document called `SUMMARY.md` that discusses your thoughts and approach to your solution. This should include:
+  - Any thoughts you had and approaches you took during the exercise
+  - What tradeoffs you made when formulating your solutions and why
+  - How you would approach the features that you didn't complete
 
-While we will encourage pair programming on the development team, it is our expectation that this is solely your work.
+While you can research and look up things on the Internet just as you would on the job, it is our expectation that this is your work and that you understand and can describe all code solutions and patterns you write for the exercise.
 
 ## Submit Your Work
 
@@ -81,4 +90,4 @@ To submit your work, create a [git bundle](http://schacon.github.io/git/git-bund
 
 ## Questions?
 
-If you should have any questions related to features or expectations, we encourage you to reach out. Please send questions to `jobs+bos@techelevator.com`.
+If you should have any questions related to features or expectations, we encourage you to reach out before you dive into the exercise. Please send questions to `jobs+bos@techelevator.com`.
