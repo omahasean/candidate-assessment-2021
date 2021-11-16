@@ -90,4 +90,4 @@ To submit your work, create a [git bundle](http://schacon.github.io/git/git-bund
 
 ## Questions?
 
-If you should have any questions related to features or expectations, we encourage you to reach out before you dive into the exercise. Please send questions to `jobs+bos@techelevator.com`.
+If you should have any questions related to features or expectations, we encourage you to reach out before you dive into the exercise. Please send questions to `nlacy@k12.com`.
