@@ -84,10 +84,6 @@ We will be looking for the following:
 
 While you can research and look up things on the Internet just as you would on the job, it is our expectation that this is your work and that you understand and can describe all code solutions and patterns you write for the exercise.
 
-## Submit Your Work
-
-To submit your work, create a [git bundle](http://schacon.github.io/git/git-bundle.html) of the entire repository using the command `git bundle create your-name-assessment.bundle --all`, and send the file to `jobs+bos@techelevator.com`.
-
 ## Questions?
 
 If you should have any questions related to features or expectations, we encourage you to reach out before you dive into the exercise. Please send questions to `jobs+bos@techelevator.com`.
