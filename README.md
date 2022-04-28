@@ -86,8 +86,8 @@ While you can research and look up things on the Internet just as you would on t
 
 ## Submit Your Work
 
-To submit your work, create a [git bundle](http://schacon.github.io/git/git-bundle.html) of the entire repository using the command `git bundle create your-name-assessment.bundle --all`, and send the file to `nlacy@k12.com`.
+To submit your work, create a [git bundle](http://schacon.github.io/git/git-bundle.html) of the entire repository using the command `git bundle create your-name-assessment.bundle --all`, and send the file to `jbailey@k12.com`.
 
 ## Questions?
 
-If you should have any questions related to features or expectations, we encourage you to reach out before you dive into the exercise. Please send questions to `nlacy@k12.com`.
+If you should have any questions related to features or expectations, we encourage you to reach out before you dive into the exercise. Please send questions to `jbailey@k12.com`.
