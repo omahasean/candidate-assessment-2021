@@ -81,7 +81,7 @@ We will be looking for the following:
   - Any thoughts you had and approaches you took during the exercise
   - What tradeoffs you made when formulating your solutions and why
   - How you would approach the features that you didn't complete
-  - As technical design and architecture will be important in this role, we expect to see your designs clearly articualted and documented. **This is one of the most important things we will be evaluating in the assessment.**
+  - As technical design and architecture will be important in this role, we expect to see your designs clearly articulated and documented. **This is one of the most important things we will be evaluating in the assessment.**
 
 While you can research and look up things on the Internet just as you would on the job, it is our expectation that this is your work and that you understand and can describe all code solutions and patterns you write for the exercise.
 
