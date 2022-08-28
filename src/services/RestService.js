@@ -22,7 +22,13 @@ export default class RestService {
   async getAll() {
     return await this._getAllIncluding();
   }
-
+    /**
+   * Get all resources from the API including at another endpoint
+   */
+  async getEmbeddedInfo(otherEndpoint = ''){
+    const response = await axios.get(`${this.#endpointUrl}?_embed=${otherEndpoint}`);
+    return response.data;
+  }
   /**
    * Gets all resources from the API, but includes the additional suffix in the
    * request. For instance, this might include additional data that should be
@@ -30,6 +36,7 @@ export default class RestService {
    *
    * @param {string} suffix - Additional value to be added to the root URI for
    * a list of resrouces.
+   * 
    */
   async _getAllIncluding(suffix = '') {
     const response = await axios.get(`${this.#endpointUrl}/${suffix}`);

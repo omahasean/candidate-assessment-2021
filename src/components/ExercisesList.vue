@@ -22,8 +22,9 @@ export default {
   },
   async created() {
     const exerciseService = new ExerciseService();
-    this.exercises = await exerciseService.getAll();
+    this.exercises = await exerciseService.getEmbeddedInfo('studentScores');
   },
+
 };
 </script>
 
