@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Exercises from '@/views/Exercises';
+import ExerciseDetails from '@/views/ExerciseDetails'
 
 Vue.use(VueRouter);
 
@@ -16,8 +17,9 @@ const routes = [
     component: Exercises,
   },
   {
-    path: '/exercises/:id',
-    component: Exercises
+    path: '/exercises/:name',
+    name: 'ExerciseDetails',
+    component: ExerciseDetails
   }
 ];
 

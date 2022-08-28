@@ -30,6 +30,14 @@ export default class RestService {
     return response.data;
   }
   /**
+   * Allows the ability to search more specific information
+   * like a WHERE clause in SQL
+   */
+  async refineByInformation(table, information){
+    const response = await axios.get(`${this.endpointUrl}?${table}=${information}`);
+    return response.data;
+}
+  /**
    * Gets all resources from the API, but includes the additional suffix in the
    * request. For instance, this might include additional data that should be
    * embeded, or could include paging or filtering options.
@@ -42,4 +50,5 @@ export default class RestService {
     const response = await axios.get(`${this.#endpointUrl}/${suffix}`);
     return response.data;
   }
+
 }

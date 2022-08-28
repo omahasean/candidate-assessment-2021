@@ -6,7 +6,13 @@
       v-for="(exercise, i) in exerciseList"
       :key="exercise.id"
     >
-      <div>{{ exercise.name }}</div>
+      <router-link
+        :to="{
+          name: 'ExerciseDetails',
+          params: { name: exercise.name, id: exercise.id },
+        }"
+        >{{ exercise.name }}</router-link
+      >
       <div>{{ computeAverages(exercise.studentScores) }}</div>
     </div>
   </div>
@@ -31,8 +37,6 @@ export default {
         }
       });
       let average = (total / studentScoreList.length).toFixed(2);
-      console.log('avg');
-      console.log(average);
       return average;
     },
   },
