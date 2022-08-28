@@ -7,7 +7,7 @@
       :key="exercise.id"
     >
       <div>{{ exercise.name }}</div>
-      <div class="average">{{ computeAverages(exercise.studentScores) }}</div>
+      <div>{{ computeAverages(exercise.studentScores) }}</div>
     </div>
   </div>
 </template>
@@ -23,11 +23,16 @@ export default {
   },
   methods: {
     computeAverages: function(studentScoreList) {
+      console.log(studentScoreList);
       let total = 0;
       studentScoreList.forEach((student) => {
-        total += student.score;
+        if (student.score != null) {
+          total += student.score;
+        }
       });
-      let average = total / studentScoreList.length;
+      let average = (total / studentScoreList.length).toFixed(2);
+      console.log('avg');
+      console.log(average);
       return average;
     },
   },
@@ -42,6 +47,7 @@ export default {
 <style scoped>
 .exercise {
   display: flex;
+  justify-content: space-between;
   border-bottom: 1px solid #add8e6;
   width: 100%;
   padding: 15px;
@@ -52,7 +58,6 @@ export default {
 .exercise:hover {
   background-color: rgba(1, 141, 255, 0.1);
 }
-
 .stripe {
   background-color: #f5f5f5;
 }

@@ -15,6 +15,10 @@ const routes = [
     name: 'Exercises',
     component: Exercises,
   },
+  {
+    path: '/exercises/:id',
+    component: Exercises
+  }
 ];
 
 const router = new VueRouter({
