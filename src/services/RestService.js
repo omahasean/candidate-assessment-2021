@@ -33,7 +33,7 @@ export default class RestService {
    * Allows the ability to search more specific information
    * like a WHERE clause in SQL
    */
-  async refineByInformation(table, information){
+  async refineByInformation(table='', information=''){
     const response = await axios.get(`${this.endpointUrl}?${table}=${information}`);
     return response.data;
 }

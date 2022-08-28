@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import StudentService from '../services/StudentService';
+// import StudentService from '../services/StudentService';
 
 export default {
   data() {
@@ -17,12 +17,12 @@ export default {
     exerciseId: Number,
   },
 
-  async created() {
-    const studentService = new StudentService();
-    this.studentList = await studentService.searchScoresByLessonId(
-      this.exerciseId
-    );
-  },
+  //   async created() {
+  //     const studentService = new StudentService();
+  //     this.studentList = await studentService.searchScoresByLessonId(
+  //       this.exerciseId
+  //     );
+  //   },
 };
 </script>
 

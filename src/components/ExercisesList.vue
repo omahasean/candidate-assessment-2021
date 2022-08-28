@@ -9,7 +9,7 @@
       <router-link
         :to="{
           name: 'ExerciseDetails',
-          params: { name: exercise.name, id: exercise.id },
+          params: { id: exercise.id },
         }"
         >{{ exercise.name }}</router-link
       >

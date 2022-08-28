@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1>{{ this.$route.params.name }}</h1>
+    <h1>{{ this.exercise.name }}</h1>
     <card class="exercises">
-      <student-list :exerciseId="this.$route.params.id" />
+      <student-list :exerciseId="this.exercise.id" />
     </card>
   </div>
 </template>
@@ -18,9 +18,10 @@ export default {
     };
   },
   async created() {
+    console.log(this.$route.params);
     const exerciseService = new ExerciseService();
     this.exercise = await exerciseService.searchExerciseById(
-      this.$route.params.name
+      this.$route.params.id
     );
     console.log(this.exercise);
   },

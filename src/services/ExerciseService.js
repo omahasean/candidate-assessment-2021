@@ -7,7 +7,8 @@ export default class ExerciseService extends RestService {
   constructor() {
     super('exercises');
   }
-  async searchExerciseById(id){
+   async searchExerciseById(id) {
     return await RestService.refineByInformation("id", id)
   }
 }
+ 
