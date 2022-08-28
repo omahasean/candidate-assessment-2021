@@ -3,7 +3,7 @@
     <ul class="nav-list">
       <router-link
         :to="{ name: 'Exercises' }"
-        v-slot="{ href, route, navigate, isActive, isExactActive }"
+        v-slot="{ href, navigate, isActive, isExactActive }"
       >
         <li
           class="nav-item"

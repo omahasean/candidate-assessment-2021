@@ -3,10 +3,11 @@
     <div
       class="exercise"
       :class="{ stripe: i % 2 === 0 }"
-      v-for="(exercise, i) in exercises"
+      v-for="(exercise, i) in exerciseList"
       :key="exercise.id"
     >
-      {{ exercise.name }}
+      <div>{{ exercise.name }}</div>
+      <div class="average">{{ computeAverages(exercise.studentScores) }}</div>
     </div>
   </div>
 </template>
@@ -17,14 +18,24 @@ import ExerciseService from '@/services/ExerciseService';
 export default {
   data() {
     return {
-      exercises: [],
+      exerciseList: [],
     };
+  },
+  methods: {
+    computeAverages: function(studentScoreList) {
+      let total = 0;
+      studentScoreList.forEach((student) => {
+        total += student.score;
+      });
+      let average = total / studentScoreList.length;
+      return average;
+    },
   },
   async created() {
     const exerciseService = new ExerciseService();
-    this.exercises = await exerciseService.getEmbeddedInfo('studentScores');
+    this.exerciseList = await exerciseService.getEmbeddedInfo('studentScores');
+    console.log(this.exerciseList);
   },
-
 };
 </script>
 
